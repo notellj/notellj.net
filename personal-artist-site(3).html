@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Previous head section and styles remain the same until gallery styles -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notellj</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Previous styles remain exactly the same until gallery styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .social-links a {
+            color: #333;
+            font-size: 24px;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #555;
+        }
+
+        nav {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #333;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #555;
+            border-radius: 3px;
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .coming-soon {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+        }
+
+        .music-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .music-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .music-link:hover {
+            background-color: #555;
+        }
+
+        .music-link i {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        /* Form Styles (shared between blog and gallery) */
+        .content-form {
+            margin-bottom: 30px;
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .content-form input,
+        .content-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .content-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .content-form .file-input-container {
+            margin-bottom: 10px;
+        }
+
+        .content-form .file-input-container input[type="file"] {
+            display: none;
+        }
+
+        .content-form .file-label {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #e0e0e0;
+            color: #333;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .content-form .file-name {
+            margin-left: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .content-form button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        .content-form button:hover {
+            background-color: #555;
+        }
+
+        /* Gallery Styles */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .gallery-item {
+            position: relative;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header and Navigation remain the same -->
+    <header>
+        <h1>notellj</h1>
+        <p>Artist • Creator • Visionary</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/notellj/" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@notellj" target="_blank" title="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#music">Music</a>
+        <a href="#merch">Merch</a>
+        <a href="#blog">Blog</a>
+        <a href="#gallery">Gallery</a>
+    </nav>
+
+    <section id="music">
+        <h2>Music</h2>
+        <div class="music-links">
+            <a href="https://open.spotify.com/artist/3CvaxaDewgFP9gYqxQqV1e?si=tRKL82NATZ6fMUbGbaquuQ" class="music-link" target="_blank">
+                <i class="fab fa-spotify"></i>
+                Listen on Spotify
+            </a>
+            <a href="https://soundcloud.com/notellj" class="music-link" target="_blank">
+                <i class="fab fa-soundcloud"></i>
+                Listen on SoundCloud
+            </a>
+            <a href="https://music.apple.com/us/artist/notellj/1554078351" class="music-link" target="_blank">
+                <i class="fab fa-apple"></i>
+                Listen on Apple Music
+            </a>
+        </div>
+    </section>
+
+    <section id="merch">
+        <h2>Merch</h2>
+        <p class="coming-soon">Merch store coming soon!</p>
+    </section>
+
+    <section id="blog">
+        <h2>Blog</h2>
+        <div class="content-form">
+            <input type="text" id="postTitle" placeholder="Post Title">
+            <textarea id="postContent" placeholder="Write your post here..."></textarea>
+            <button onclick="addBlogPost()">Add Post</button>
+        </div>
+        <div id="blogPosts"></div>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="content-form">
+            <input type="text" id="imageTitle" placeholder="Image Title">
+            <textarea id="imageDescription" placeholder="Add a description for your image..."></textarea>
+            <div class="file-input-container">
+                <label for="imageUpload" class="file-label">Choose Image</label>
+                <span id="fileName" class="file-name">No file chosen</span>
+                <input type="file" id="imageUpload" accept="image/*" onchange="updateFileName()">
+            </div>
+            <button onclick="addImage()">Add Image</button>
+        </div>
+        <div id="imageGallery" class="gallery"></div>
+    </section>
+
+    <script>
+        // Blog functionality
+        function addBlogPost() {
+            const title = document.getElementById('postTitle').value;
+            const content = document.getElementById('postContent').value;
+            const date = new Date().toLocaleDateString();
+
+            if (!title || !content) {
+                alert('Please fill in both title and content');
+                return;
+            }
+
+            const postHTML = `
+                <div class="blog-post">
+                    <h3>${title}</h3>
+                    <p class="post-date">${date}</p>
+                    <p>${content}</p>
+                </div>
+            `;
+
+            document.getElementById('blogPosts').insertAdjacentHTML('afterbegin', postHTML);
+            document.getElementById('postTitle').value = '';
+            document.getElementById('postContent').value = '';
+        }
+
+        // Gallery functionality
+        function updateFileName() {
+            const input = document.getElementById('imageUpload');
+            const fileName = document.getElementById('fileName');
+            fileName.textContent = input.files[0] ? input.files[0].name : 'No file chosen';
+        }
+
+        function addImage() {
+            const input = document.getElementById('imageUpload');
+            const title = document.getElementById('imageTitle').value;
+            const description = document.getElementById('imageDescription').value;
+            const file = input.files[0];
+
+            if (!file || !title) {
+                alert('Please select an image and add a title');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const imageHTML = `
+                    <div class="gallery-item">
+                        <img src="${e.target.result}" alt="${title}" class="gallery-image">
+                        <div class="gallery-caption">
+                            <strong>${title}</strong>
+                            ${description ? `<p>${description}</p>` : ''}
+                        </div>
+                    </div>
+                `;
+                document.getElementById('imageGallery').insertAdjacentHTML('afterbegin', imageHTML);
+            };
+            reader.readAsDataURL(file);
+
+            // Reset form
+            document.getElementById('imageTitle').value = '';
+            document.getElementById('imageDescription').value = '';
+            document.getElementById('imageUpload').value = '';
+            document.getElementById('fileName').textContent = 'No file chosen';
+        }
+    </script>
+</body>
+</html>
